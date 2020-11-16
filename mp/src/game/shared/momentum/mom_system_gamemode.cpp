@@ -250,6 +250,7 @@ void CGameMode_Conc::SetGameModeVars()
     sv_accelerate.SetValue(14);
     sv_maxspeed.SetValue(320);
     sv_stopspeed.SetValue(100);
+    sv_maxvelocity.SetValue(2000);
     sv_considered_on_ground.SetValue(1);
     sv_duck_collision_fix.SetValue(false);
 }

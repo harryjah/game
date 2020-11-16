@@ -370,8 +370,8 @@ void CMomConcProjectile::Explode(trace_t *pTrace, int bitsDamageType)
         // Make handheld concs not push other players
         if (pEntity != GetThrower() && m_bIsHandheld)
             continue;
-
-        Vector vecDistance = pEntity->GetAbsOrigin() - GetAbsOrigin();
+        
+        Vector vecDistance = 0.5f * (pEntity->GetAbsOrigin() + pEntity->EyePosition()) + Vector(0,0,10) - GetAbsOrigin();
         float flDistance = vecDistance.Length();
         Vector vecResult;
 
